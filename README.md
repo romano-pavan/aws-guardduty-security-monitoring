@@ -53,7 +53,7 @@ Generated sample findings in GuardDuty to simulate attacks and verify the end-to
 ![AWS](images/guardduty-findings.jpg)
 
 
-##Proof of Concept
+## Proof of Concept
 
 
 Here is a snapshot of the raw JSON alerts successfully delivered to my inbox via Amazon SNS after GuardDuty detected a simulated attack:
