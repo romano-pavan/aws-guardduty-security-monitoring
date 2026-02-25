@@ -38,6 +38,9 @@ Created an SNS topic and subscribed my email address to receive administrative a
 
 Configured EventBridge to listen specifically for `GuardDuty Findings` and route them directly to my SNS topic.
 
+![AWS](images/guardduty-findings.jpg)
+
+
 ![AWS](images/event-bridge-rules.jpg)
 
 
