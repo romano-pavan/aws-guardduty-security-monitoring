@@ -20,8 +20,17 @@ Alerting: Amazon SNS (Simple Notification Service)
 
 1. CloudTrail continuously records all API calls and console actions across the AWS account and securely stores them in an S3 Bucket.
 2. GuardDuty actively analyzes these CloudTrail logs, VPC Flow Logs, and DNS logs using machine learning to detect anomalies.
-3. When GuardDuty detects a threat, it generates a "Finding" which triggers an **EventBridge Rule**.
-4. The EventBridge rule pushes the alert to an **SNS Topic**, which instantly sends an email notification to the administrator.
+3. When GuardDuty detects a threat, it generates a "Finding" which triggers an EventBridge Rule.
+4. The EventBridge rule pushes the alert to an SNS Topic, which instantly sends an email notification to the administrator.
 
 
+## The Setup Process
 
+Activated CloudTrail for my AWS account.
+
+![AWS](images/cloud-trail.jpg)
+
+* Enabled GuardDuty to provide intelligent threat detection.
+* Created an SNS topic and subscribed my email address to receive administrative alerts.
+* Configured EventBridge to listen specifically for `GuardDuty Findings` and route them directly to my SNS topic.
+* Generated sample findings in GuardDuty to simulate attacks (like `CryptoCurrency:EC2/BitcoinTool.B!DNS`) and verify the end-to-end email delivery.
