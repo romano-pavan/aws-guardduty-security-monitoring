@@ -1,7 +1,7 @@
 # aws-guardduty-security-monitoring
 monitoring of all AWS account activities and automatically alert me in real-time if any malicious behavior was detected 
 
-Tech Stack
+Tech Stack:
 
 Data Logging:AWS CloudTrail, Amazon S3
 
@@ -56,5 +56,13 @@ Generated sample findings in GuardDuty to simulate attacks and verify the end-to
 
 
 ![AWS](images/aws-notification.jpg)
+
+
+## Troubleshooting & Lessons Learned
+
+I successfully created the SNS subscription and clicked the confirmation link in my email. However, in the AWS Console, the subscription ID showed up as `Deleted`, and I wasn't receiving any EventBridge alerts.
+I realized that my email provider's automatic security/virus scanner had instantly triggered the "Unsubscribe" link hidden at the bottom of the initial AWS confirmation email. This immediately killed the SNS subscription.
+I deleted the dead subscription, created a fresh one, and carefully confirmed it without triggering the unsubscribe link. The system immediately generated a valid ARN and alerts started flowing!
+
 
 
