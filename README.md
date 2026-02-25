@@ -43,9 +43,6 @@ Created an SNS topic and subscribed my email address to receive administrative a
 Configured EventBridge to listen specifically for `GuardDuty Findings` and route them directly to my SNS topic.
 
 
-![AWS](images/guardduty-findings.jpg)
-
-
 ![AWS](images/event-bridge-rules.jpg)
 
 
@@ -53,6 +50,13 @@ Configured EventBridge to listen specifically for `GuardDuty Findings` and route
 Generated sample findings in GuardDuty to simulate attacks and verify the end-to-end email delivery.
 
 
+![AWS](images/guardduty-findings.jpg)
+
+
+##Proof of Concept
+
+
+Here is a snapshot of the raw JSON alerts successfully delivered to my inbox via Amazon SNS after GuardDuty detected a simulated attack:
 
 
 ![AWS](images/aws-notification.jpg)
