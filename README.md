@@ -13,6 +13,11 @@ Alerting: Amazon SNS (Simple Notification Service)
 
 
 ## Architecture Flow
+
+![AWS](images/security-flow.jpg)
+
+
+
 1. CloudTrail continuously records all API calls and console actions across the AWS account and securely stores them in an S3 Bucket.
 2. GuardDuty actively analyzes these CloudTrail logs, VPC Flow Logs, and DNS logs using machine learning to detect anomalies.
 3. When GuardDuty detects a threat, it generates a "Finding" which triggers an **EventBridge Rule**.
