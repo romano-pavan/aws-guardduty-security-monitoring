@@ -31,9 +31,19 @@ Activated CloudTrail for my AWS account.
 ![AWS](images/cloud-trail.jpg)
 
 Enabled GuardDuty to provide intelligent threat detection.
+
 Created an SNS topic and subscribed my email address to receive administrative alerts.
 
 ![AWS](images/sns.jpg)
 
-* Configured EventBridge to listen specifically for `GuardDuty Findings` and route them directly to my SNS topic.
-* Generated sample findings in GuardDuty to simulate attacks (like `CryptoCurrency:EC2/BitcoinTool.B!DNS`) and verify the end-to-end email delivery.
+Configured EventBridge to listen specifically for `GuardDuty Findings` and route them directly to my SNS topic.
+
+![AWS](images/event-bridge-rules.jpg)
+
+
+Generated sample findings in GuardDuty to simulate attacks and verify the end-to-end email delivery.
+
+
+![AWS](images/aws-notification.jpg)
+
+
